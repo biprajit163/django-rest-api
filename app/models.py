@@ -9,7 +9,6 @@ class User(models.Model):
     email = models.CharField(max_length=100)
     blogs = ArrayField(models.TextField())
 
-
     def __str__(self):
         return self.username
 

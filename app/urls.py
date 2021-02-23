@@ -3,5 +3,6 @@ from . import views
 from rest_framework.routers import DefaultRouter
 
 urlpatterns = [
-    path('api/')
+    path('users/', views.UserList.as_view(), name='user_list'),
+    path('users/<int:pk>', views.UserDetail.as_view(), name='user_detail')
 ]
